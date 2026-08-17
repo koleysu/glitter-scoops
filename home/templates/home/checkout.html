@@ -1,0 +1,262 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Checkout - Glitter Scoops</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/checkout.css' %}">
+
+</head>
+
+<body>
+
+<h1>✨ Glitter Scoops Checkout ✨</h1>
+
+<form method="POST" action="/checkout/" id="checkout-form">
+
+    {% csrf_token %}
+
+    <!-- ===================================== -->
+    <!-- CART DATA -->
+    <!-- ===================================== -->
+
+    <input
+        type="hidden"
+        id="cart_data"
+        name="cart_data"
+        value="{}">
+
+
+    <!-- ===================================== -->
+    <!-- CUSTOMER DETAILS -->
+    <!-- ===================================== -->
+
+    <h2>Customer Details</h2>
+
+    <label>Name *</label>
+
+    <input
+        type="text"
+        name="name"
+        required>
+
+
+    <label>Gender *</label>
+
+    <select name="gender" required>
+
+        <option value="">Select</option>
+
+        <option value="Male">Male</option>
+
+        <option value="Female">Female</option>
+
+        <option value="Other">Other</option>
+
+    </select>
+
+
+    <label>Age *</label>
+
+    <input
+        type="number"
+        name="age"
+        required>
+
+
+    <label>Mobile Number *</label>
+
+    <input
+        type="tel"
+        name="mobile"
+        maxlength="10"
+        required>
+
+
+    <label>WhatsApp Number</label>
+
+    <input
+        type="tel"
+        name="whatsapp"
+        maxlength="10">
+
+
+    <label>Email Address *</label>
+
+    <input
+        type="email"
+        name="email"
+        required>
+
+
+    <label>Delivery Address *</label>
+
+    <textarea
+        name="address"
+        rows="5"
+        required></textarea>
+
+
+    <!-- ===================================== -->
+    <!-- ORDER SUMMARY -->
+    <!-- ===================================== -->
+
+    <div class="summary">
+
+        Grand Total :
+        ₹ <span id="grand-total">0</span>
+
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- BUTTONS -->
+    <!-- ===================================== -->
+
+    <div class="buttons">
+
+        <a href="/cart/">
+
+            <button
+                type="button"
+                class="back-btn">
+
+                ← Back to Cart
+
+            </button>
+
+        </a>
+
+
+        <button
+            type="submit"
+            class="place-btn">
+
+            Place Order
+
+        </button>
+
+    </div>
+
+</form>
+
+
+<!-- ===================================== -->
+<!-- CHECKOUT JAVASCRIPT -->
+<!-- ===================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Get cart from localStorage
+    let cart = localStorage.getItem("cart");
+
+    console.log("Cart from localStorage:", cart);
+
+
+    // If cart does not exist
+    if (!cart) {
+
+        console.log("No cart found in localStorage.");
+
+        document.getElementById("cart_data").value = "{}";
+
+        return;
+    }
+
+
+    // Put cart into hidden input
+    document.getElementById("cart_data").value = cart;
+
+
+    console.log(
+        "Cart data copied to hidden field:",
+        document.getElementById("cart_data").value
+    );
+
+
+    // Calculate Grand Total
+    try {
+
+        let cartObject = JSON.parse(cart);
+
+        let total = 0;
+
+
+        for (let key in cartObject) {
+
+            let item = cartObject[key];
+
+            let price = Number(item.price) || 0;
+
+            let qty = Number(item.qty) || 0;
+
+            total += price * qty;
+
+        }
+
+
+        document.getElementById("grand-total").innerText =
+            total;
+
+
+    } catch (error) {
+
+        console.error(
+            "Error reading cart:",
+            error
+        );
+
+    }
+
+});
+
+
+// ==========================================
+// BEFORE FORM SUBMISSION
+// ==========================================
+
+document.getElementById("checkout-form")
+.addEventListener("submit", function (event) {
+
+    let cart = localStorage.getItem("cart");
+
+    console.log(
+        "Cart before form submission:",
+        cart
+    );
+
+
+    if (!cart) {
+
+        alert("Your cart is empty.");
+
+        event.preventDefault();
+
+        return;
+
+    }
+
+
+    // IMPORTANT
+    // Copy localStorage cart into hidden field
+
+    document.getElementById("cart_data").value =
+        cart;
+
+
+    console.log(
+        "cart_data submitted:",
+        document.getElementById("cart_data").value
+    );
+
+});
+
+</script>
+
+</body>
+</html>

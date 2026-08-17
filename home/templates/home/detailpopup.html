@@ -1,0 +1,64 @@
+{% load static %}
+
+<div id="scoopModal" class="scoop-modal">
+
+    <div class="scoop-box">
+
+        <!-- Close Button -->
+        <span class="close-popup"
+              onclick="closeScoopPopup()">
+            ✕
+        </span>
+
+        <!-- Product Image -->
+       <div class="left-panel">
+
+			<img id="scoop-image"
+				 src=""
+				 alt="Product Image">
+
+		</div>
+
+        <!-- Product Details -->
+        <div class="right-panel">
+
+            <h1 id="scoop-title">
+                Product
+            </h1>
+
+            <p id="scoop-desc"
+               class="popup-description">
+            </p>
+
+            <!-- Product ID -->
+            <input type="hidden"
+                   id="scoop-product-id">
+
+            <h3 id="size-heading">
+                Select Size
+            </h3>
+
+            <!-- Dynamic Variants -->
+            <div class="size-options"
+                 id="size-options">
+            </div>
+
+            <!-- Selected Price -->
+            <h2>Select price<h2><h2 id="selected-price">
+                ₹0
+            </h2>
+
+            <!-- Add To Cart -->
+            <button type="button"
+                    class="cart-btn"
+                    onclick="addSelectedScoop()">
+
+                🛒 Add To Cart
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

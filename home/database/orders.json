@@ -1,0 +1,503 @@
+[
+    {
+        "order_id": "32E155C2",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 23,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "aa"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-07-13 23:43:56",
+        "payment_status": "Paid",
+        "status": "Delivered",
+        "delivery_date": "2026-08-05 00:07:37"
+    },
+    {
+        "order_id": "048F0AE8",
+        "customer": {
+            "name": null,
+            "gender": null,
+            "age": 0,
+            "mobile": null,
+            "whatsapp": null,
+            "email": null,
+            "address": null
+        },
+        "items": [
+            {
+                "name": "Lip Gloss",
+                "price": 149,
+                "qty": 1,
+                "image": "/static/images/lipgloss.jpg",
+                "total": 149
+            },
+            {
+                "name": "Star Clips (2)",
+                "price": 79,
+                "qty": 1,
+                "image": "/static/images/starclips.jpg",
+                "total": 79
+            }
+        ],
+        "grand_total": 228,
+        "order_date": "2026-07-13 23:53:56",
+        "payment_status": "Paid",
+        "status": "Delivered",
+        "delivery_date": "2026-08-05 00:07:37"
+    },
+    {
+        "order_id": "56DA7369",
+        "customer": {
+            "name": null,
+            "gender": null,
+            "age": 0,
+            "mobile": null,
+            "whatsapp": null,
+            "email": null,
+            "address": null
+        },
+        "items": [
+            {
+                "name": "Lip Gloss",
+                "price": 149,
+                "qty": 1,
+                "image": "/static/images/lipgloss.jpg",
+                "total": 149
+            },
+            {
+                "name": "Star Clips (2)",
+                "price": 79,
+                "qty": 1,
+                "image": "/static/images/starclips.jpg",
+                "total": 79
+            }
+        ],
+        "grand_total": 228,
+        "order_date": "2026-07-14 00:09:24",
+        "payment_status": "Paid",
+        "status": "Processing",
+        "delivery_date": "2026-08-05 00:07:10"
+    },
+    {
+        "order_id": "B9D44A26",
+        "customer": {
+            "name": "Smitasya Koley",
+            "gender": "Male",
+            "age": 40,
+            "mobile": "9831892940",
+            "whatsapp": "",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "XCLUSIVE TOWER,\r\n1 A GHOSH PARA, HALTU,GARFA,\r\nKOLKATA-700078"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-07-19 00:00:55",
+        "payment_status": "Paid",
+        "status": "Pending",
+        "delivery_date": "2026-08-05 00:07:10"
+    },
+    {
+        "order_id": "22F45615",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 44,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "1 a ghosh para"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-07-19 16:04:46",
+        "payment_status": "Paid",
+        "status": "Processing",
+        "delivery_date": "2026-08-05 00:07:18"
+    },
+    {
+        "order_id": "20CF81A2",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 50,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "ffff"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-07-19 16:07:54",
+        "payment_status": "Paid",
+        "status": "Packed",
+        "delivery_date": "2026-08-05 00:07:18"
+    },
+    {
+        "order_id": "35588CC0",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 44,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "rrr"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-08-04 22:38:48",
+        "payment_status": "Paid",
+        "status": "Shipped",
+        "delivery_date": "2026-08-05 00:07:18"
+    },
+    {
+        "order_id": "8E70A179",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 44,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "aaa"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-08-04 22:41:49",
+        "payment_status": "Paid",
+        "status": "Delivered",
+        "delivery_date": "2026-08-05 00:07:18"
+    },
+    {
+        "order_id": "1CC4761F",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 12,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "dd"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-08-10 14:00:53",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "3A747C84",
+        "customer": {
+            "name": "bb",
+            "gender": "Male",
+            "age": 44,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "Test"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-08-10 19:48:05",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "D9FD6E1E",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 44,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "ggg"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-08-10 19:58:41",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "D4FFBB46",
+        "customer": {
+            "name": "ssss",
+            "gender": "Male",
+            "age": 23,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "dd"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-08-10 20:01:04",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "FB8B3884",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 44,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "ssssssssssssssssssssssssssssssssssss"
+        },
+        "items": [],
+        "grand_total": 0,
+        "order_date": "2026-08-10 23:59:00",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "17ACEFCF",
+        "customer": {
+            "name": "Smita",
+            "gender": "Female",
+            "age": 13,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "Test at Night"
+        },
+        "items": [
+            {
+                "name": "Diamond Painting",
+                "price": 79.0,
+                "qty": 1,
+                "image": "/static/images/DiamondPainting.jpg",
+                "total": 79.0
+            }
+        ],
+        "grand_total": 79.0,
+        "order_date": "2026-08-11 00:17:33",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "1BD8B98F",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 34,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "dddddddddd"
+        },
+        "items": [
+            {
+                "name": "Mystery Scoop",
+                "price": 90.0,
+                "qty": 1,
+                "image": "http://127.0.0.1:8000/static/images/mystryscoopsmall.png",
+                "total": 90.0
+            },
+            {
+                "name": "Diamond Painting",
+                "price": 79.0,
+                "qty": 2,
+                "image": "/static/images/DiamondPainting.jpg",
+                "total": 158.0
+            }
+        ],
+        "grand_total": 248.0,
+        "order_date": "2026-08-11 00:24:15",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "A1772085",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 56,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "halty"
+        },
+        "items": [
+            {
+                "name": "Hair Candy Scoop",
+                "price": 39.0,
+                "qty": 1,
+                "image": "http://127.0.0.1:8000/static/images/HairCandy.jpg",
+                "total": 39.0
+            },
+            {
+                "name": "Premium Package",
+                "price": 49.0,
+                "qty": 1,
+                "image": "/static/images/PremiumPackaging.jpg",
+                "total": 49.0
+            }
+        ],
+        "grand_total": 88.0,
+        "order_date": "2026-08-11 00:33:12",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "821EADCB",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 44,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "aaaa"
+        },
+        "items": [
+            {
+                "name": "Premium Package",
+                "price": 49.0,
+                "qty": 1,
+                "image": "/static/images/PremiumPackaging.jpg",
+                "total": 49.0
+            }
+        ],
+        "grand_total": 49.0,
+        "order_date": "2026-08-16 11:27:45",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "57151F70",
+        "customer": {
+            "name": "ssssmsm",
+            "gender": "Female",
+            "age": 34,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "paerk se"
+        },
+        "items": [
+            {
+                "name": "Mini Bottle",
+                "price": 49.0,
+                "qty": 1,
+                "image": "/static/images/minibottle.jpg",
+                "total": 49.0
+            },
+            {
+                "name": "Hair Candy Scoop",
+                "price": 39.0,
+                "qty": 1,
+                "image": "http://127.0.0.1:8000/static/images/HairCandy.jpg",
+                "total": 39.0
+            },
+            {
+                "name": "Mystry Cup",
+                "price": 99.0,
+                "qty": 1,
+                "image": "http://127.0.0.1:8000/static/images/MystryCup.jpg",
+                "total": 99.0
+            }
+        ],
+        "grand_total": 187.0,
+        "order_date": "2026-08-16 19:55:42",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "E125D9D0",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 35,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "park streeg"
+        },
+        "items": [
+            {
+                "name": "Hand Fan (Random color)",
+                "price": 99.0,
+                "qty": 1,
+                "image": "/static/images/Handfan.jpg",
+                "total": 99.0
+            }
+        ],
+        "grand_total": 99.0,
+        "order_date": "2026-08-16 23:36:35",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "976146E3",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 45,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "park street"
+        },
+        "items": [
+            {
+                "name": "Mystry Cup",
+                "price": 99.0,
+                "qty": 1,
+                "image": "http://127.0.0.1:8000/static/images/MystryCup.jpg",
+                "total": 99.0
+            },
+            {
+                "name": "Mystery Scoop",
+                "price": 299.0,
+                "qty": 1,
+                "image": "http://127.0.0.1:8000/static/images/mystryscooplarge.jpg",
+                "total": 299.0
+            }
+        ],
+        "grand_total": 398.0,
+        "order_date": "2026-08-17 17:40:55",
+        "payment_status": "Pending",
+        "status": "Pending"
+    },
+    {
+        "order_id": "3A43DE9D",
+        "customer": {
+            "name": "Sudipta Koley",
+            "gender": "Male",
+            "age": 33,
+            "mobile": "9831892940",
+            "whatsapp": "9831153589",
+            "email": "sksudiptakoley@gmail.com",
+            "address": "aaaaa"
+        },
+        "items": [
+            {
+                "name": "Diamond Painting (Random design)",
+                "price": 69.0,
+                "qty": 3,
+                "image": "/static/images/DiamondPainting.jpg",
+                "total": 207.0
+            },
+            {
+                "name": "Mystery Scoop",
+                "price": 299.0,
+                "qty": 1,
+                "image": "http://127.0.0.1:8000/static/images/mystryscooplarge.jpg",
+                "total": 299.0
+            }
+        ],
+        "grand_total": 506.0,
+        "order_date": "2026-08-17 18:12:01",
+        "payment_status": "Pending",
+        "status": "Pending"
+    }
+]

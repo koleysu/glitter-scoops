@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/detailpopup.css' %}">
+    <title>Glitter Scoops</title>
+</head>
+
+<body>
+
+<script src="{% static 'js/app.js' %}"></script>
+
+<h1>✨ Glitter Scoops ✨</h1>
+
+<div class="product-container">
+
+    <div class="checkout-icon">
+        <a href="/cart/">
+            🛒
+            <span id="cart-count">0</span>
+        </a>
+    </div>
+
+    <div class="offer-banner">
+        <div class="offer-text">
+            🎉 GRAND OPENING OFFER • 10% DISCOUNT ON ALL PRODUCTS • SHOP NOW • 🎉
+        </div>
+    </div>
+
+    <h2 class="section-title">
+        ✨ Glitter Scoops Collection ✨
+    </h2>
+
+    <div class="product-grid">
+
+        {% for item in items %}
+             
+             {% if item.id == "GS005" or item.id == "GS004" or item.id == "GS003" %}
+                
+                <div class="card" onclick='openMysteryPopup({{ item.json_data|safe }})'>           
+
+            {% else %}
+
+                 <div class="card" >
+
+            {% endif %}
+
+                <div class="image-frame">
+                    <img src="{% static item.image %}" alt="{{ item.name }}">
+                </div>
+
+                <div class="card-body">
+
+                    <h3>{{ item.name }}</h3>
+
+                    <p class="price">₹{{ item.price }}</p>
+					
+
+                    {% if item.id != "GS005" and item.id != "GS004" and item.id != "GS003" %}
+
+                       <button
+								type="button"
+								class="cart-btn"
+								onclick="addToCart(
+									event,
+									'{{ item.id }}',
+									'{{ item.name }}',
+									'{{ item.default_variant.size }}',
+									{{ item.default_variant.price|default:0 }},
+									'{% static item.image %}'
+								)">
+
+								🛒 Add to Cart
+
+							</button>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% include "home/detailpopup.html" %}
+
+</body>
+</html>

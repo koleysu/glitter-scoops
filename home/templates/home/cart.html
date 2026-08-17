@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Your Cart - Glitter Scoops</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+
+<body>
+
+<div class="cart-page">
+
+    <h1>🛒 Your Cart</h1>
+
+    <div id="cart-container"></div>
+
+    <div class="cart-summary">
+
+        <h2>
+            Grand Total :
+            ₹<span id="grand-total">0</span>
+        </h2>
+        <a href="/">
+
+               <button type="button" onclick="continueShopping()">← Continue Shopping</button>
+
+            </a>
+        <a href="/checkout/">
+            <button class="checkout-btn">
+                Proceed to Checkout
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{% static 'js/cart.js' %}"></script>
+
+</body>
+
+</html>

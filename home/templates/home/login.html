@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Glitter Scoops - Staff Login</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/login.css' %}">
+
+</head>
+
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <div class="logo">
+            ✨
+        </div>
+
+        <h1>
+            Glitter Scoops
+        </h1>
+
+        <h2>
+            Staff Login
+        </h2>
+
+
+        {% if error %}
+
+        <div class="error-message">
+
+            {{ error }}
+
+        </div>
+
+        {% endif %}
+
+
+        <form
+            method="POST"
+            action="/login/">
+
+            {% csrf_token %}
+
+
+            <label>
+                Username
+            </label>
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                required
+                autofocus>
+
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required>
+
+
+            <button
+                type="submit"
+                class="login-btn">
+
+                🔐 Login
+
+            </button>
+
+        </form>
+
+
+        <a
+            href="/"
+            class="back-link">
+
+            ← Back to Main Menu
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

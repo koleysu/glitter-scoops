@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Glitter Scoops - Order Management</title>
+
+    <link rel="stylesheet" href="{% static 'css/orders.css' %}">
+
+</head>
+
+<body>
+<div class="orders-header">
+
+    <h1>📦 Glitter Scoops Orders</h1>
+
+    <div>
+
+        Welcome,
+        <strong>
+            {{ request.session.staff_name }}
+        </strong>
+
+        &nbsp; | &nbsp;
+
+        <a href="/logout/">
+            Logout
+        </a>
+
+    </div>
+
+</div>
+<div class="container">
+
+    <h1>📦 Glitter Scoops Order Management</h1>
+
+    <form method="POST" action="{% url 'save_orders' %}">
+
+        {% csrf_token %}
+
+        <table class="orders-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Order ID</th>
+
+                    <th>Order Date</th>
+
+                    <th>Customer</th>
+
+                    <th>Mobile</th>
+
+                    <th>No. of Items</th>
+
+                    <th>Grand Total</th>
+
+                    <th>Payment</th>
+
+                    <th>Status</th>
+
+                    <th>Delivered</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% for order in orders %}
+
+                <!-- ================= MAIN ROW ================= -->
+
+                <tr>
+
+                    <td>{{ order.order_id }}</td>
+
+                    <td>{{ order.order_date }}</td>
+
+                    <td>{{ order.customer.name }}</td>
+
+                    <td>{{ order.customer.mobile }}</td>
+
+                    <td>{{ order.items|length }}</td>
+
+                    <td>₹{{ order.grand_total }}</td>
+
+                    <td>
+
+                        <span class="payment-status">
+
+                            {{ order.payment_status }}
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <select name="status_{{ forloop.counter0 }}">
+
+                            <option value="Pending"
+                            {% if order.status == "Pending" %}selected{% endif %}>
+                                Pending
+                            </option>
+
+                            <option value="Processing"
+                            {% if order.status == "Processing" %}selected{% endif %}>
+                                Processing
+                            </option>
+
+                            <option value="Packed"
+                            {% if order.status == "Packed" %}selected{% endif %}>
+                                Packed
+                            </option>
+
+                            <option value="Shipped"
+                            {% if order.status == "Shipped" %}selected{% endif %}>
+                                Shipped
+                            </option>
+
+                            <option value="Delivered"
+                            {% if order.status == "Delivered" %}selected{% endif %}>
+                                Delivered
+                            </option>
+
+                        </select>
+
+                        <input
+                            type="hidden"
+                            name="order_id_{{ forloop.counter0 }}"
+                            value="{{ order.order_id }}">
+
+                    </td>
+
+                    <td>
+
+                        <input
+                            type="checkbox"
+                            name="delivered_{{ forloop.counter0 }}"
+                            {% if order.status == "Delivered" %}
+                            checked
+                            {% endif %}>
+
+                    </td>
+
+                    <td>
+
+                        <button
+                            type="button"
+                            class="view-btn"
+                            onclick="toggleDetails('detail{{ forloop.counter }}')">
+
+                            View
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- ================= DETAILS ROW ================= -->
+
+                <tr
+                    id="detail{{ forloop.counter }}"
+                    class="detail-row"
+                    style="display:none;">
+
+                    <td colspan="10">
+
+                        <div class="detail-box">
+
+                            <h3>👤 Customer Details</h3>
+
+                            <p>
+
+                                <b>Name :</b>
+
+                                {{ order.customer.name }}
+
+                            </p>
+
+                            <p>
+
+                                <b>Gender :</b>
+
+                                {{ order.customer.gender }}
+
+                            </p>
+
+                            <p>
+
+                                <b>Age :</b>
+
+                                {{ order.customer.age }}
+
+                            </p>
+
+                            <p>
+
+                                <b>Mobile :</b>
+
+                                {{ order.customer.mobile }}
+
+                            </p>
+
+                            <p>
+
+                                <b>WhatsApp :</b>
+
+                                {{ order.customer.whatsapp }}
+
+                            </p>
+
+                            <p>
+
+                                <b>Email :</b>
+
+                                {{ order.customer.email }}
+
+                            </p>
+
+                            <p>
+
+                                <b>Address :</b>
+
+                                {{ order.customer.address }}
+
+                            </p>
+
+                            <br>
+
+                            <h3>🛍 Ordered Items</h3>
+
+                            <table class="inner-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Image</th>
+
+                                        <th>Item</th>
+
+                                        <th>Qty</th>
+
+                                        <th>Price</th>
+
+                                        <th>Total</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                {% for item in order.items %}
+
+                                    <tr>
+
+                                        <td>
+
+                                            <img
+                                                src="{{ item.image }}"
+                                                width="70">
+
+                                        </td>
+
+                                        <td>{{ item.name }}</td>
+
+                                        <td>{{ item.qty }}</td>
+
+                                        <td>₹{{ item.price }}</td>
+
+                                        <td>₹{{ item.total }}</td>
+
+                                    </tr>
+
+                                {% empty %}
+
+                                    <tr>
+
+                                        <td
+                                            colspan="5"
+                                            style="text-align:center">
+
+                                            No Items Available
+
+                                        </td>
+
+                                    </tr>
+
+                                {% endfor %}
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+        <input
+            type="hidden"
+            name="total_orders"
+            value="{{ orders|length }}">
+
+        <br><br>
+
+        <button
+            type="submit"
+            class="save-btn">
+
+            💾 Save Changes
+
+        </button>
+
+    </form>
+
+</div>
+
+<script src="{% static 'js/orders.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+[
+    {
+        "id": "GS001",
+        "name": "Hand Fan (Random color)",
+		"popup_required": false,
+        "category": "Accessories",
+        "image": "images/Handfan.jpg",
+        "images": [
+            "images/Handfan.jpg",
+            "images/Handfan_1.jpg",
+            "images/Handfan_2.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS001-ST",
+                "size": "Standard",
+                "price": 99
+            }
+        ]
+    },
+    {
+        "id": "GS002",
+        "name": "Diamond Painting (Random design)",
+		"popup_required": false,
+        "category": "Craft",
+        "image": "images/DiamondPainting.jpg",
+        "images": [
+            "images/DiamondPainting.jpg",
+            "images/DiamondPainting_1.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS002-ST",
+                "size": "Standard",
+                "price": 69
+            }
+        ]
+    },
+    {
+        "id": "GS003",
+        "name": "Mystry Cup",
+		"popup_required": true,
+        "category": "Mystery",
+        "image": "images/MystryCup.jpg",
+        "images": [
+            "images/MystryCup.jpg",
+            "images/MystryCup_1.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS003-S",
+                "size": "Small",
+                "price": 49
+            },
+            {
+                "id": "GS003-L",
+                "size": "Large",
+                "price": 99
+            }
+        ]
+    },
+    {
+        "id": "GS004",
+        "name": "Hair Candy Scoop (Consits of only small hair bands as shown in the pic)",
+		"popup_required": true,
+        "category": "Hair Accessories",
+        "image": "images/HairCandy.jpg",
+        "images": [
+            "images/HairCandy.jpg",
+            "images/HairCandy_1.jpg",
+            "images/HairCandy_2.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS004-S",
+                "size": "Small",
+                "price": 19
+            },
+            {
+                "id": "GS004-M",
+                "size": "Medium",
+                "price": 39
+            },
+            {
+                "id": "GS004-L",
+                "size": "Large",
+                "price": 59
+            }
+        ]
+    },
+    {
+        "id": "GS005",
+        "name": "Mystery Scoop",
+		"popup_required": true,
+        "category": "Mystery",
+        "image": "images/mystryscoop.png",
+        "images": [
+            "images/mystryscoopsmall.jpg",
+            "images/mystryscoopmedium.jpg",
+            "images/mystryscooplarge.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS005-S",
+                "size": "Small",
+                "price": 99,
+				"image":"images/mystryscoopsmall.jpg"
+            },
+			{
+                "id": "GS005-M",
+                "size": "Medium",
+                "price": 199,
+				"image":"images/mystryscoopmedium.jpg"
+            },
+            {
+                "id": "GS005-L",
+                "size": "Large",
+                "price": 299,
+				"image":"images/mystryscooplarge.jpg"
+            }
+        ]
+    },
+    {
+        "id": "GS006",
+        "name": "Premium Package",
+		"popup_required": false,
+        "category": "Packaging",
+        "image": "images/PremiumPackaging.jpg",
+        "images": [
+            "images/PremiumPackaging.jpg",
+            "images/PremiumPackaging_1.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS006-ST",
+                "size": "Standard",
+                "price": 59
+            }
+        ]
+    }
+	,
+    {
+        "id": "GS007",
+        "name": "Mini Bottle",
+		"popup_required": false,
+        "category": "Packaging",
+        "image": "images/minibottle.jpg",
+        "images": [
+            "images/minibottle.jpg",
+            "images/minibottle.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS007-ST",
+                "size": "Small",
+                "price": 169
+            }
+        ]
+    }
+	,
+    {
+        "id": "GS008",
+        "name": "Mini Claw (Random color)",
+		"popup_required": false,
+        "category": "Accessories",
+        "image": "images/Miniclaw.jpg",
+        "images": [
+            "images/Miniclaw.jpg",
+            "images/Miniclaw.jpg"
+        ],
+        "variants": [
+            {
+                "id": "GS008-ST",
+                "size": "Small",
+                "price": 49
+            }
+        ]
+    }
+]
