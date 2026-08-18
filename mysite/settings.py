@@ -26,7 +26,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "glitter-scoops-1.onrender.com"
+    "glitter-scoops-1.onrender.com",
+    "glitterscoops.com",
+    "www.glitterscoops.com"
 ]
 
 
